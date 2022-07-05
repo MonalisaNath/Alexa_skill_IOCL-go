@@ -1,0 +1,78 @@
+{
+    "SKILL_NAME": "the i,o, c, l go ",
+    "FIRST_TIME_USER": [
+        "Welcome to {}. What's the d, u, n number and what is your order?"
+    ],
+    "FIRST_TIME_USER_REPROMPT": [
+        "What's is the d,u,n and order?"
+    ],
+    "REPEAT_USER_GREETING": [
+        "Welcome back. You can ask me to repeat, update or delete your order. What would you like to do?"
+    ],
+    "REPEAT_USER_GREETING_REPROMPT": [
+        "What would you like to do?"
+    ],
+    "NAME_SAVED": [
+        "I have successfully saved your order. You can now ask me to repeat, update or delete it. What would you like to do?"
+    ],
+    "NAME_SAVED_REPROMPT": [
+        "What would you like to do?"
+    ],
+    "TELL_NAME": [
+        "Your last order was {}. What else would you like to do?"
+    ],
+    "TELL_NAME_REPROMPT": [
+        "What else would you like to do?"
+    ],
+    "NAME_UPDATED": [
+        "Your order has been updated to {}. You can now ask me to repeat, update or delete it. What would you like to do?"
+    ],
+    "NAME_UPDATED_REPROMPT": [
+        "What would you like to do?"
+    ],
+    "NO_NAME":[
+        "I don't know your order yet. What's your order?"
+    ],
+    "NO_NAME_REPROMPT":[
+        "What's your order?"
+    ],
+    "NAME_DELETED":[
+        "I've deleted your order from the database. What would you like to do now?"
+    ],
+    "NAME_DELETED_REPROMPT":[
+        "What would you like to do now?"
+    ],
+    "REPEAT": [
+      "I said... {}"
+    ],
+    "REPEAT_REPROMPT": [
+      "{}"
+    ],
+    "HELP": [
+      "This skill demonstrates how to read, write, update and add delete attribute values from dynamo DB."
+    ],
+    "HELP_REPROMPT": [
+      "This skill demonstrates how to read, write, update and add delete attribute values from dynamo DB."
+    ],
+    "FALLBACK": [
+      "Sorry, I didn't understand that. Can you please repeat that?"
+    ],
+    "FALLBACK_REPROMPT": [
+      "Can you say that again?"
+    ],
+    "CANCEL_STOP_RESPONSE": [
+      "Good Bye"
+    ],
+    "AVAILABLE_ITEM": [
+       "We have Pen,Pencil,Eraser,Notebook,Marker,crayons.Pen for 10 rupees,Pencil for 5 rupees,Eraser for 6 rupees,Notebook for 30 rupees,Marker for 20 rupees,Crayons for 40 rupees," 
+    ],
+    "AVAILABLE_ITEM_REPROMPT" : [
+        "Should I repeat the items we have again"
+        ],
+    "ASTRONAUTS_RESPONSE": [ 
+        "There are currently {} astronauts in space."
+    ],
+    
+    "ERROR": "Sorry, I wasn't able to handle your last request. Could you say that again?",
+    "ERROR_REPROMPT": "Could you say that again?"
+}
