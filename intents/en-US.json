@@ -1,0 +1,241 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "template ten",
+      "intents": [
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.RepeatIntent",
+          "samples": []
+        },
+        {
+          "name": "MyOrderIsIntent",
+          "slots": [
+            {
+              "name": "item",
+              "type": "dunid",
+              "samples": [
+                "the dun is {item}",
+                "{item}",
+                "dun is {item}"
+              ],
+              "multipleValues": {
+                "enabled": false
+              }
+            },
+            {
+              "name": "price",
+              "type": "price_list",
+              "samples": [
+                "place order for {price}",
+                "order is {price}"
+              ]
+            }
+          ],
+          "samples": [
+            "place an order for {price}",
+            "dun is {item} and order is {price}",
+            "{price}",
+            "my order is {price}",
+            "{item}",
+            "dun is {item}",
+            "The dun is {item} and  My order is  {price}",
+            "dun is  {item} place an order for {price}",
+            "{item} and {price}"
+          ]
+        },
+        {
+          "name": "WhatsMyOrderIntent",
+          "slots": [],
+          "samples": [
+            "do you know my order",
+            "tell me my order",
+            "tell my order",
+            "what\u0027s my order",
+            "repeat my order",
+            "what is my order"
+          ]
+        },
+        {
+          "name": "UpdateOrderIntent",
+          "slots": [
+            {
+              "name": "NewitemSlot",
+              "type": "price_list"
+            }
+          ],
+          "samples": [
+            "update order to {NewitemSlot}",
+            "change order to {NewitemSlot}",
+            "my new order is {NewitemSlot}",
+            "update my order to {NewitemSlot}",
+            "change my oreder to {NewitemSlot}"
+          ]
+        },
+        {
+          "name": "DeleteOrderIntent",
+          "slots": [],
+          "samples": [
+            "delete order",
+            "delete order from database",
+            "delete my order from the database",
+            "remove my order from the database",
+            "delete",
+            "delete my order"
+          ]
+        },
+        {
+          "name": "Whatavailable",
+          "slots": [],
+          "samples": [
+            "what can I buy",
+            "what are the prices",
+            "What are the items available",
+            "What do you offer"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "2000"
+              }
+            },
+            {
+              "name": {
+                "value": "1500"
+              }
+            },
+            {
+              "name": {
+                "value": "1000"
+              }
+            },
+            {
+              "name": {
+                "value": "500"
+              }
+            }
+          ],
+          "name": "price_list"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "pc995a0"
+              }
+            },
+            {
+              "name": {
+                "value": "er2346w"
+              }
+            },
+            {
+              "name": {
+                "value": "1814ab5"
+              }
+            }
+          ],
+          "name": "dunid"
+        }
+      ],
+      "modelConfiguration": {
+        "fallbackIntentSensitivity": {
+          "level": "LOW"
+        }
+      }
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "MyOrderIsIntent",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.538216485544"
+          },
+          "slots": [
+            {
+              "name": "item",
+              "type": "dunid",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.538216485544.1416013575907"
+              }
+            },
+            {
+              "name": "price",
+              "type": "price_list",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1234316720428.1192206071413"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.538216485544.1416013575907",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the dun?"
+          },
+          {
+            "type": "PlainText",
+            "value": "tell me the dun"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.538216485544",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "your order is {price} ,am I right?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1234316720428.1192206071413",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "place your order"
+          },
+          {
+            "type": "PlainText",
+            "value": "dun is {item} ,what is your {price}"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "19"
+}
